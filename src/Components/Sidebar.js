@@ -3,18 +3,16 @@ import { Box, Flex, Icon, useColorModeValue, Link } from "@chakra-ui/react";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 
 const LinkItems = [
-  { name: "Machine 1", icon: HiOutlineDesktopComputer },
-  { name: "Machine 2", icon: HiOutlineDesktopComputer },
-  { name: "Machine 3", icon: HiOutlineDesktopComputer },
-  { name: "Machine 4", icon: HiOutlineDesktopComputer },
-  { name: "Machine 5", icon: HiOutlineDesktopComputer },
+  { name: "0", icon: HiOutlineDesktopComputer },
+  { name: "1", icon: HiOutlineDesktopComputer },
+  { name: "2", icon: HiOutlineDesktopComputer },
 ];
 
 export default function SimpleSidebar({ changeServer, children }) {
   return (
     <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
       <SidebarContent changeServer={changeServer} />
-      <Box ml="13%" p="3" bg="black">
+      <Box ml="8%" p="2" bg="black">
         {children}
       </Box>
     </Box>
@@ -27,7 +25,7 @@ const SidebarContent = ({ changeServer, onClose, ...rest }) => {
       bg={useColorModeValue("white", "gray.900")}
       borderRight="1px"
       borderRightColor={useColorModeValue("gray.200", "gray.700")}
-      w={"13%"}
+      w={"8%"}
       pos="fixed"
       h="full"
       {...rest}

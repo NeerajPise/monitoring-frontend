@@ -1,16 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 import SimpleSidebar from "./Components/Sidebar";
-import { serverConstants } from "./constants";
 import MainGrid from "./Components/MainGrid";
+import { servers } from "./endpoints";
 
 function App() {
-  const [currentServer, setCurrentServer] = useState(
-    serverConstants.MACHINE_ONE
-  );
+  const [currentServer, setCurrentServer] = useState(servers[0]);
 
   const changeServer = (newServer) => {
-    setCurrentServer(newServer);
+    const updatedServer = servers[newServer];
+    setCurrentServer(updatedServer);
   };
 
   return (
